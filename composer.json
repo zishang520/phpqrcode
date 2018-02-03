@@ -2,7 +2,7 @@
     "name": "luoyy/phpqrcode",
     "description": "phpqrcode",
     "keywords": ["qrcode", "phpqrcode", "php生成二维码"],
-    "license": "LGPL-2.1",
+    "license": "LGPL-2.1-or-later",
     "time": "2018-02-03",
     "authors": [{
         "name": "zishang520",
