@@ -16,7 +16,7 @@
     "autoload": {
         "files": [
             "src/qrconst.php",
-            "src/tcpdf/const.php",
+            "src/tcpdf/const.php"
         ],
         "psr-4": {
             "luoyy\\phpqrcode\\": "src/"
