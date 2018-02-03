@@ -1,0 +1,27 @@
+{
+    "name": "luoyy/phpqrcode",
+    "description": "phpqrcode",
+    "keywords": ["qrcode", "phpqrcode", "php生成二维码"],
+    "license": "LGPL-2.1",
+    "time": "2018-02-03",
+    "authors": [{
+        "name": "zishang520",
+        "email": "zishang520@gmail.com",
+        "git": "https://github.com/zishang520/phpqrcode",
+        "homepage": "http://www.luoyy.com"
+    }],
+    "require": {
+        "php": ">=5.4.0",
+    },
+    "autoload": {
+        "files": [
+            "src/qrconst.php",
+            "src/tcpdf/const.php",
+        ],
+        "psr-4": {
+            "luoyy\\phpqrcode\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
