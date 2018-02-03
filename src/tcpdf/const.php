@@ -90,169 +90,166 @@
  */
 
 // definitions
-if (!defined('QRCODEDEFS')) {
 
-    /**
-     * Indicate that definitions for this class are set
-     */
-    define('QRCODEDEFS', true);
+/**
+ * Indicate that definitions for this class are set
+ */
+defined('QRCODEDEFS') || define('QRCODEDEFS', true);
 
-    // -----------------------------------------------------
+// -----------------------------------------------------
 
-    // Encoding modes (characters which can be encoded in QRcode)
+// Encoding modes (characters which can be encoded in QRcode)
 
-    /**
-     * Encoding mode
-     */
-    define('QR_MODE_NL', -1);
+/**
+ * Encoding mode
+ */
+defined('QR_MODE_NL') || define('QR_MODE_NL', -1);
 
-    /**
-     * Encoding mode numeric (0-9). 3 characters are encoded to 10bit length. In theory, 7089 characters or less can be stored in a QRcode.
-     */
-    define('QR_MODE_NM', 0);
+/**
+ * Encoding mode numeric (0-9). 3 characters are encoded to 10bit length. In theory, 7089 characters or less can be stored in a QRcode.
+ */
+defined('QR_MODE_NM') || define('QR_MODE_NM', 0);
 
-    /**
-     * Encoding mode alphanumeric (0-9A-Z $%*+-./:) 45characters. 2 characters are encoded to 11bit length. In theory, 4296 characters or less can be stored in a QRcode.
-     */
-    define('QR_MODE_AN', 1);
+/**
+ * Encoding mode alphanumeric (0-9A-Z $%*+-./:) 45characters. 2 characters are encoded to 11bit length. In theory, 4296 characters or less can be stored in a QRcode.
+ */
+defined('QR_MODE_AN') || define('QR_MODE_AN', 1);
 
-    /**
-     * Encoding mode 8bit byte data. In theory, 2953 characters or less can be stored in a QRcode.
-     */
-    define('QR_MODE_8B', 2);
+/**
+ * Encoding mode 8bit byte data. In theory, 2953 characters or less can be stored in a QRcode.
+ */
+defined('QR_MODE_8B') || define('QR_MODE_8B', 2);
 
-    /**
-     * Encoding mode KANJI. A KANJI character (multibyte character) is encoded to 13bit length. In theory, 1817 characters or less can be stored in a QRcode.
-     */
-    define('QR_MODE_KJ', 3);
+/**
+ * Encoding mode KANJI. A KANJI character (multibyte character) is encoded to 13bit length. In theory, 1817 characters or less can be stored in a QRcode.
+ */
+defined('QR_MODE_KJ') || define('QR_MODE_KJ', 3);
 
-    /**
-     * Encoding mode STRUCTURED (currently unsupported)
-     */
-    define('QR_MODE_ST', 4);
+/**
+ * Encoding mode STRUCTURED (currently unsupported)
+ */
+defined('QR_MODE_ST') || define('QR_MODE_ST', 4);
 
-    // -----------------------------------------------------
+// -----------------------------------------------------
 
-    // Levels of error correction.
-    // QRcode has a function of an error correcting for miss reading that white is black.
-    // Error correcting is defined in 4 level as below.
+// Levels of error correction.
+// QRcode has a function of an error correcting for miss reading that white is black.
+// Error correcting is defined in 4 level as below.
 
-    /**
-     * Error correction level L : About 7% or less errors can be corrected.
-     */
-    define('QR_ECLEVEL_L', 0);
+/**
+ * Error correction level L : About 7% or less errors can be corrected.
+ */
+defined('QR_ECLEVEL_L') || define('QR_ECLEVEL_L', 0);
 
-    /**
-     * Error correction level M : About 15% or less errors can be corrected.
-     */
-    define('QR_ECLEVEL_M', 1);
+/**
+ * Error correction level M : About 15% or less errors can be corrected.
+ */
+defined('QR_ECLEVEL_M') || define('QR_ECLEVEL_M', 1);
 
-    /**
-     * Error correction level Q : About 25% or less errors can be corrected.
-     */
-    define('QR_ECLEVEL_Q', 2);
+/**
+ * Error correction level Q : About 25% or less errors can be corrected.
+ */
+defined('QR_ECLEVEL_Q') || define('QR_ECLEVEL_Q', 2);
 
-    /**
-     * Error correction level H : About 30% or less errors can be corrected.
-     */
-    define('QR_ECLEVEL_H', 3);
+/**
+ * Error correction level H : About 30% or less errors can be corrected.
+ */
+defined('QR_ECLEVEL_H') || define('QR_ECLEVEL_H', 3);
 
-    // -----------------------------------------------------
+// -----------------------------------------------------
 
-    // Version. Size of QRcode is defined as version.
-    // Version is from 1 to 40.
-    // Version 1 is 21*21 matrix. And 4 modules increases whenever 1 version increases.
-    // So version 40 is 177*177 matrix.
+// Version. Size of QRcode is defined as version.
+// Version is from 1 to 40.
+// Version 1 is 21*21 matrix. And 4 modules increases whenever 1 version increases.
+// So version 40 is 177*177 matrix.
 
-    /**
-     * Maximum QR Code version.
-     */
-    define('QRSPEC_VERSION_MAX', 40);
+/**
+ * Maximum QR Code version.
+ */
+defined('QRSPEC_VERSION_MAX') || define('QRSPEC_VERSION_MAX', 40);
 
-    /**
-     * Maximum matrix size for maximum version (version 40 is 177*177 matrix).
-     */
-    define('QRSPEC_WIDTH_MAX', 177);
+/**
+ * Maximum matrix size for maximum version (version 40 is 177*177 matrix).
+ */
+defined('QRSPEC_WIDTH_MAX') || define('QRSPEC_WIDTH_MAX', 177);
 
-    // -----------------------------------------------------
+// -----------------------------------------------------
 
-    /**
-     * Matrix index to get width from $capacity array.
-     */
-    define('QRCAP_WIDTH', 0);
+/**
+ * Matrix index to get width from $capacity array.
+ */
+defined('QRCAP_WIDTH') || define('QRCAP_WIDTH', 0);
 
-    /**
-     * Matrix index to get number of words from $capacity array.
-     */
-    define('QRCAP_WORDS', 1);
+/**
+ * Matrix index to get number of words from $capacity array.
+ */
+defined('QRCAP_WORDS') || define('QRCAP_WORDS', 1);
 
-    /**
-     * Matrix index to get remainder from $capacity array.
-     */
-    define('QRCAP_REMINDER', 2);
+/**
+ * Matrix index to get remainder from $capacity array.
+ */
+defined('QRCAP_REMINDER') || define('QRCAP_REMINDER', 2);
 
-    /**
-     * Matrix index to get error correction level from $capacity array.
-     */
-    define('QRCAP_EC', 3);
+/**
+ * Matrix index to get error correction level from $capacity array.
+ */
+defined('QRCAP_EC') || define('QRCAP_EC', 3);
 
-    // -----------------------------------------------------
+// -----------------------------------------------------
 
-    // Structure (currently usupported)
+// Structure (currently usupported)
 
-    /**
-     * Number of header bits for structured mode
-     */
-    define('STRUCTURE_HEADER_BITS', 20);
+/**
+ * Number of header bits for structured mode
+ */
+defined('STRUCTURE_HEADER_BITS') || define('STRUCTURE_HEADER_BITS', 20);
 
-    /**
-     * Max number of symbols for structured mode
-     */
-    define('MAX_STRUCTURED_SYMBOLS', 16);
+/**
+ * Max number of symbols for structured mode
+ */
+defined('MAX_STRUCTURED_SYMBOLS') || define('MAX_STRUCTURED_SYMBOLS', 16);
 
-    // -----------------------------------------------------
+// -----------------------------------------------------
 
-    // Masks
+// Masks
 
-    /**
-     * Down point base value for case 1 mask pattern (concatenation of same color in a line or a column)
-     */
-    define('N1', 3);
+/**
+ * Down point base value for case 1 mask pattern (concatenation of same color in a line or a column)
+ */
+defined('N1') || define('N1', 3);
 
-    /**
-     * Down point base value for case 2 mask pattern (module block of same color)
-     */
-    define('N2', 3);
+/**
+ * Down point base value for case 2 mask pattern (module block of same color)
+ */
+defined('N2') || define('N2', 3);
 
-    /**
-     * Down point base value for case 3 mask pattern (1:1:3:1:1(dark:bright:dark:bright:dark)pattern in a line or a column)
-     */
-    define('N3', 40);
+/**
+ * Down point base value for case 3 mask pattern (1:1:3:1:1(dark:bright:dark:bright:dark)pattern in a line or a column)
+ */
+defined('N3') || define('N3', 40);
 
-    /**
-     * Down point base value for case 4 mask pattern (ration of dark modules in whole)
-     */
-    define('N4', 10);
+/**
+ * Down point base value for case 4 mask pattern (ration of dark modules in whole)
+ */
+defined('N4') || define('N4', 10);
 
-    // -----------------------------------------------------
+// -----------------------------------------------------
 
-    // Optimization settings
+// Optimization settings
 
-    /**
-     * if true, estimates best mask (spec. default, but extremally slow; set to false to significant performance boost but (propably) worst quality code
-     */
-    define('QR_FIND_BEST_MASK', true);
+/**
+ * if true, estimates best mask (spec. default, but extremally slow; set to false to significant performance boost but (propably) worst quality code
+ */
+defined('QR_FIND_BEST_MASK') || define('QR_FIND_BEST_MASK', true);
 
-    /**
-     * if false, checks all masks available, otherwise value tells count of masks need to be checked, mask id are got randomly
-     */
-    define('QR_FIND_FROM_RANDOM', 2);
+/**
+ * if false, checks all masks available, otherwise value tells count of masks need to be checked, mask id are got randomly
+ */
+defined('QR_FIND_FROM_RANDOM') || define('QR_FIND_FROM_RANDOM', 2);
 
-    /**
-     * when QR_FIND_BEST_MASK === false
-     */
-    define('QR_DEFAULT_MASK', 2);
+/**
+ * when QR_FIND_BEST_MASK === false
+ */
+defined('QR_DEFAULT_MASK') || define('QR_DEFAULT_MASK', 2);
 
-    // -----------------------------------------------------
-
-}
+// -----------------------------------------------------
