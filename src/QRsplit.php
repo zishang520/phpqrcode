@@ -318,7 +318,7 @@ class QRsplit
     public static function splitStringToQRinput($string, QRinput $input, $modeHint, $casesensitive = true)
     {
         if (is_null($string) || $string == '\0' || $string == '') {
-            throw new Exception('empty string!!!');
+            throw new \Exception('empty string!!!');
         }
 
         $split = new QRsplit($string, $input, $modeHint);
