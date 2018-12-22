@@ -1,6 +1,8 @@
 <?php
 namespace luoyy\phpqrcode;
 
+use luoyy\phpqrcode\QRrsItem;
+
 /*
  * PHP QR Code encoder
  *
@@ -43,4 +45,4 @@ class QRrsblock
         $this->eccLength = $el;
         $this->ecc = $ecc;
     }
-};
+}

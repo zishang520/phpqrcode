@@ -1,6 +1,9 @@
 <?php
 namespace luoyy\phpqrcode;
 
+use luoyy\phpqrcode\QRimage;
+use luoyy\phpqrcode\QRmask;
+
 /*
  * PHP QR Code encoder
  *

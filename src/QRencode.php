@@ -1,6 +1,10 @@
 <?php
 namespace luoyy\phpqrcode;
 
+use Exception;
+use luoyy\phpqrcode\QRimage;
+use luoyy\phpqrcode\QRtools;
+
 /*
  * PHP QR Code encoder
  *
@@ -135,6 +139,7 @@ class QRencode
 
         }
     }
+
     //----------------------------------------------------------------------
     public function encodeBase64($intext, $outfile = false, $saveandprint = false)
     {

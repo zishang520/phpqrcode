@@ -59,10 +59,10 @@ class QRimage
             return $image;
         } else {
             if ($saveandprint === true) {
-                file_put_contents($filename,$image);
+                file_put_contents($filename, $image);
                 return $image;
             } else {
-                return file_put_contents($filename,$image);
+                return file_put_contents($filename, $image);
             }
         }
         return $image;

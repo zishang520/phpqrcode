@@ -272,7 +272,7 @@ class QRcode
         -1, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, //
         25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, -1, -1, -1, -1, -1, //
         -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, //
-        -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, //
+        -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1 //
     );
 
     /**
@@ -321,7 +321,7 @@ class QRcode
         array(165, 3196, 0, array(630, 1204, 1770, 2100)), //
         array(169, 3362, 0, array(660, 1260, 1860, 2220)), //
         array(173, 3532, 0, array(720, 1316, 1950, 2310)), //
-        array(177, 3706, 0, array(750, 1372, 2040, 2430)), // 40
+        array(177, 3706, 0, array(750, 1372, 2040, 2430)) // 40
     );
 
     /**
@@ -332,7 +332,7 @@ class QRcode
         array(10, 12, 14),
         array(9, 11, 13),
         array(8, 16, 16),
-        array(8, 10, 12),
+        array(8, 10, 12)
     );
 
     /**
@@ -381,7 +381,7 @@ class QRcode
         array(array(17, 4), array(29, 14), array(49, 10), array(24, 46)), //
         array(array(4, 18), array(13, 32), array(48, 14), array(42, 32)), //
         array(array(20, 4), array(40, 7), array(43, 22), array(10, 67)), //
-        array(array(19, 6), array(18, 31), array(34, 34), array(20, 61)), // 40
+        array(array(19, 6), array(18, 31), array(34, 34), array(20, 61)) // 40
     );
 
     /**
@@ -399,7 +399,7 @@ class QRcode
         array(28, 50), array(26, 50), array(30, 54), array(28, 54), array(32, 58), // 21-25
         array(30, 58), array(34, 62), array(26, 50), array(30, 54), array(26, 52), // 26-30
         array(30, 56), array(34, 60), array(30, 58), array(34, 62), array(30, 54), // 31-35
-        array(24, 50), array(28, 54), array(32, 58), array(26, 54), array(30, 58), // 35-40
+        array(24, 50), array(28, 54), array(32, 58), array(26, 54), array(30, 58) // 35-40
     );
 
     /**
@@ -413,7 +413,7 @@ class QRcode
         0x0f928, 0x10b78, 0x1145d, 0x12a17, 0x13532, 0x149a6, 0x15683, 0x168c9, //
         0x177ec, 0x18ec4, 0x191e1, 0x1afab, 0x1b08e, 0x1cc1a, 0x1d33f, 0x1ed75, //
         0x1f250, 0x209d5, 0x216f0, 0x228ba, 0x2379f, 0x24b0b, 0x2542e, 0x26a64, //
-        0x27541, 0x28c69,
+        0x27541, 0x28c69
     );
 
     /**
@@ -424,7 +424,7 @@ class QRcode
         array(0x77c4, 0x72f3, 0x7daa, 0x789d, 0x662f, 0x6318, 0x6c41, 0x6976), //
         array(0x5412, 0x5125, 0x5e7c, 0x5b4b, 0x45f9, 0x40ce, 0x4f97, 0x4aa0), //
         array(0x355f, 0x3068, 0x3f31, 0x3a06, 0x24b4, 0x2183, 0x2eda, 0x2bed), //
-        array(0x1689, 0x13be, 0x1ce7, 0x19d0, 0x0762, 0x0255, 0x0d0c, 0x083b), //
+        array(0x1689, 0x13be, 0x1ce7, 0x19d0, 0x0762, 0x0255, 0x0d0c, 0x083b) //
     );
 
     // -------------------------------------------------
@@ -2289,7 +2289,7 @@ class QRcode
             "\xa1\xa0\xa0\xa0\xa1",
             "\xa1\xa0\xa1\xa0\xa1",
             "\xa1\xa0\xa0\xa0\xa1",
-            "\xa1\xa1\xa1\xa1\xa1",
+            "\xa1\xa1\xa1\xa1\xa1"
         );
         $yStart = $oy - 2;
         $xStart = $ox - 2;
@@ -2389,7 +2389,7 @@ class QRcode
             "\xc1\xc0\xc1\xc1\xc1\xc0\xc1",
             "\xc1\xc0\xc1\xc1\xc1\xc0\xc1",
             "\xc1\xc0\xc0\xc0\xc0\xc0\xc1",
-            "\xc1\xc1\xc1\xc1\xc1\xc1\xc1",
+            "\xc1\xc1\xc1\xc1\xc1\xc1\xc1"
         );
         for ($y = 0; $y < 7; $y++) {
             $frame = $this->qrstrset($frame, $ox, ($oy + $y), $finder[$y]);

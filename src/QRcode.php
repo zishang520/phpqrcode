@@ -1,6 +1,15 @@
 <?php
 namespace luoyy\phpqrcode;
 
+use Exception;
+use luoyy\phpqrcode\FrameFiller;
+use luoyy\phpqrcode\QRencode;
+use luoyy\phpqrcode\QRinput;
+use luoyy\phpqrcode\QRmask;
+use luoyy\phpqrcode\QRrawcode;
+use luoyy\phpqrcode\QRsplit;
+use luoyy\phpqrcode\QRtools;
+
 /*
  * PHP QR Code encoder
  *
