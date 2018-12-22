@@ -320,7 +320,7 @@ class QRsplit
     //----------------------------------------------------------------------
     public static function splitStringToQRinput($string, QRinput $input, $modeHint, $casesensitive = true)
     {
-        if (is_null($string) || $string == '\0' || $string == '') {
+        if (is_null($string) || strlen($string) === 0 || $string == "\0" || $string == '\0') {
             throw new Exception('empty string!!!');
         }
 

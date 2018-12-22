@@ -134,9 +134,8 @@ class QRencode
             QRimage::png($tab, $outfile, min(max(1, $this->size), $maxSize), $this->margin, $saveandprint);
 
         } catch (Exception $e) {
-
             QRtools::log($outfile, $e->getMessage());
-
+            throw $e;
         }
     }
 
@@ -159,9 +158,8 @@ class QRencode
             return QRimage::base64($tab, $outfile, min(max(1, $this->size), $maxSize), $this->margin, $saveandprint);
 
         } catch (Exception $e) {
-
             QRtools::log($outfile, $e->getMessage());
-
+            throw $e;
         }
     }
 }

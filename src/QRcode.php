@@ -126,7 +126,7 @@ class QRcode
     //----------------------------------------------------------------------
     public function encodeString8bit($string, $version, $level)
     {
-        if (string == null) {
+        if (is_null($string) || ($strlen = strlen($string)) === 0) {
             throw new Exception('empty string!');
             return null;
         }
@@ -136,7 +136,7 @@ class QRcode
             return null;
         }
 
-        $ret = $input->append($input, QR_MODE_8, strlen($string), str_split($string));
+        $ret = $input->append($input, QR_MODE_8, $strlen, str_split($string));
         if ($ret < 0) {
             unset($input);
             return null;
